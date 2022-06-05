@@ -1,4 +1,12 @@
 <div class="test">
     <h3>Trang Home</h3>
 </div>
-<h4>Học về component</h4>
+<h4>Chào bạn {{taiKhoan}}</h4>
+<input value="{{taiKhoan}}"/>
+<br/>
+<input [value]="taiKhoan" title="Tài khoản của bạn là : {{taiKhoan}}"/>
+<br/>
+<input [value]="taiKhoan" [title]="'Tài khoản của bạn la :'+taiKhoan"/>
+<h5 *ngIf="age > 40 ">Bạn quá già</h5>
+<h5 *ngIf="age > 18 && age<=40">Bạn còn trẻ</h5>
+<h5 *ngIf="age <= 18 ">Bạn là con nít </h5>
