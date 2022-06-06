@@ -2,5 +2,24 @@
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px red;
-    width: 300px;
+    width: auto;
+  };
+
+  .table,td,th {
+    border-collapse: collapse;
+    border: 1px solid black;
+  };
+
+  td,th{
+      min-width: 100px;
+  };
+
+  .giam-gia{
+    color: red;
+    
   }
+  
+  .sanpham-giam-gia{
+    background-color: yellow;
+  }
+  

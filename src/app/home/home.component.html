@@ -1,9 +1,26 @@
 <div class="test">
     <h3>Trang Home</h3>
     <h3>Danh sách trái cây</h3>
-    <div *ngFor="let i of traiCay">
-        <li>{{i}}</li>
-    </div>
+    
+        <table class="table">
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Giảm giá</th>
+                <th>Giá KM</th>
+            </tr>
+            <tr *ngFor="let trai of traiCay2; let i=index" [ngClass]="{'sanpham-giam-gia':trai.giamgia>0}">           
+                <td>{{i+1}}</td>
+                <td>{{trai.ten|uppercase}}</td>
+                <td>{{trai.gia}}</td>
+                <td>
+                    <span [ngClass]="{'giam-gia':trai.giamgia>0}">{{trai.giamgia}}</span>    
+                </td>
+                <td>{{trai.gia-trai.giamgia}}</td>
+            </tr>
+        </table>
+  
     <br/>
     <input type="text" [(ngModel)]="taiKhoan" placeholder='Gõ tên'/>
     <h4>Chào bạn {{taiKhoan}}</h4>
