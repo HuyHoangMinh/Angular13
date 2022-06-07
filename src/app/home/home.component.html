@@ -1,6 +1,15 @@
 <div class="test">
     <h3>Trang Home</h3>
-    <h3>Danh sách trái cây</h3>
+    Tỉnh/TP
+    <select id="city" (change)="changeCity($event)">
+        <option *ngFor="let data of cities" value="{{data.city}}">{{data.city}}</option>      
+    </select>
+      <br/>
+      Quận/Huyện
+      <select id="district">
+        <option *ngFor="let district of districts" value="{{district}}">{{district}}</option>       
+      </select>
+   <!--  <h3>Danh sách trái cây</h3>
     
         <table class="table">
             <tr>
@@ -33,13 +42,13 @@
     <h4>Bạn bao nhiêu tuổi?</h4>
     <br>
     <input type="number" [(ngModel)]="age" placeholder="Gõ số tuổi"/>
-    <br>
+    <br> -->
    <!--  <h3 *ngIf="age>0 && age<18">Bạn còn trẻ</h3>
     <h3 *ngIf="age>=18 && age<40">Bạn hơi già</h3>
     <h3 *ngIf="age>=40">Bạn quá già</h3> -->
-    <div *ngIf="age>18; then gia; else tre"></div>
+    <!-- <div *ngIf="age>18; then gia; else tre"></div>
     <ng-template #tre><h2>Bạn còn trẻ</h2></ng-template>
-    <ng-template #gia><h2>Bạn già rồi</h2></ng-template>
+    <ng-template #gia><h2>Bạn già rồi</h2></ng-template> -->
 
     
 </div>
